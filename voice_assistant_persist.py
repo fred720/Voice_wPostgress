@@ -40,13 +40,12 @@ SYS_MSG_OLLAMA = (
     - "Responses must be optimized for spoken clarity and brevity."
 '''
 )
-
 DB_PARAMS = {
-    'dbname': 'memory_agent',
-    'user': 'admin',
-    'password': '7779311',
-    'host': 'localhost',
-    'port': '5432',
+    'dbname': os.getenv('DB_NAME', 'memory_agent'),
+    'user': os.getenv('DB_USER', 'admin'),
+    'password': os.getenv('DB_PASSWORD', ''),
+    'host': os.getenv('DB_HOST', 'localhost'),
+    'port': os.getenv('DB_PORT', '5432'),
 }
 
 # --- Global Variables ---
